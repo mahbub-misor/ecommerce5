@@ -28,3 +28,18 @@ Route::get('/product-details',[
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/add-cateogry',[
+	'uses' => 'CategoryController@addCategory',
+	'as' => 'add-cateogry'
+]);
+
+Route::post('/new-category',[
+	'uses' => 'CategoryController@newCategory',
+	'as' => 'new-category'
+]);
+
+Route::get('/manage-cateogry',[
+	'uses' => 'CategoryController@manageCategory',
+	'as' => 'manage-cateogry'
+]);
